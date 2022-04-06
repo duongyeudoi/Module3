@@ -1,4 +1,5 @@
 figma file: https://www.figma.com/file/yI9wduA9V8uv52Uzzmlu5O/online-marketing?node-id=0%3A1
+How to run:
 npm install -g pug
 npm install pug-cli
 pug index.pug --watch
