@@ -1,0 +1,67 @@
+@import '../base/variables';
+.testimonials {
+  padding: 14rem 2rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 20rem;
+  &-img {
+    max-width: 52.3rem;
+    width: 100%;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &-content {
+    max-width: 40rem;
+    width: 100%;
+  }
+  &-caption {
+    font-weight: 600;
+  }
+  &-heading {
+    margin-block: 1.1rem 2.5rem;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 7rem;
+  }
+  &-desc {
+    margin-bottom: 2rem;
+  }
+  &-count {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0 1rem;
+  }
+
+  &-number {
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 2.6rem;
+    color: $primary;
+  }
+  &-button {
+    border-radius: 4.1rem;
+    font-size: 1.4rem;
+    padding: 1.8rem 3rem;
+    text-transform: capitalize;
+  }
+  @media screen and (max-width: 1023.98px) {
+    padding-block: 7rem;
+    flex-direction: column;
+    &-content {
+      text-align: center;
+    }
+    &-count {
+      justify-content: center;
+      margin-block: 3rem;
+    }
+    &-heading {
+      line-height: 4rem;
+    }
+  }
+}

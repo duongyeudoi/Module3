@@ -1,0 +1,13 @@
+mixin serviceItem(imagePath,title,desc)
+  .service-item
+    .service-image
+      img(src = imagePath alt='service icon')
+    h3.global-heading.global-heading--normal.service-title=title
+    p.global-text.service-text=desc
+mixin blogItem(image,title,desc)
+  .blog-item
+    .blog-image
+      img(src = image alt='blog image')
+    .blog-item__info
+      h3.global-heading.global-heading--normal.blog-item--title=title
+      p.global-text.blog-item--text=desc

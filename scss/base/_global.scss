@@ -1,0 +1,81 @@
+@import './variables';
+* {
+  font-size: 10px;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+
+  line-height: 1;
+  color: $gray;
+}
+.wrapper {
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+.global {
+  &-caption {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    letter-spacing: 0.185rem;
+    color: $primary;
+  }
+  &-heading {
+    color: $text-dark;
+    font-weight: 700;
+
+    &--large {
+      font-size: 4.5rem;
+      line-height: 5.6rem;
+    }
+    &--big {
+      font-size: 4rem;
+      line-height: 5rem;
+    }
+    &--normal {
+      font-size: 2.1rem;
+      line-height: 3.15rem;
+      font-weight: 600;
+    }
+  }
+  &-text {
+    color: $text-gray;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+}
+.btn {
+  display: inline-block;
+  outline: none;
+  border: 0;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1;
+  padding: 1.1rem 3.2rem;
+  background-color: transparent;
+  border-radius: 2.5rem;
+  &--primary {
+    color: white;
+    background: linear-gradient(103.38deg, #f67102 5.1%, #f4a91e 86.29%);
+  }
+  &--secondary {
+    color: $primary;
+    border: 0.2rem solid $gray-stroke;
+    text-transform: capitalize;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .btn {
+    padding: 0.75rem;
+    font-size: 1.4rem;
+  }
+  .global-heading {
+    &--big {
+      font-size: 3rem;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@import '../base/variables';
+.blog {
+  max-width: 113rem;
+  margin: 0 auto;
+  margin-bottom: var(--section-spacing);
+  &-header {
+    margin-bottom: 7.8rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &-heading {
+    max-width: 45rem;
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
+  &-feature {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 3.4rem;
+  }
+  &-item {
+    overflow: hidden;
+    background-color: transparent;
+    border-radius: 1.7rem;
+    transition: all 0.2s linear;
+    &__info {
+      padding: 3.3rem 1.5rem 3.4rem 2.3rem;
+    }
+
+    &--title {
+      margin-bottom: 0.9rem;
+      transition: all 0.2s linear;
+    }
+
+    &:hover {
+      background: $white;
+      box-shadow: 0px 46px 100px -31px rgba(0, 0, 0, 0.1);
+      border-color: transparent;
+      cursor: pointer;
+    }
+    &:hover &--title {
+      color: $primary;
+    }
+  }
+  @media screen and (max-width: 1023.98px) {
+    &-header {
+      margin-bottom: 3.5rem;
+    }
+    &-feature {
+      display: grid;
+      justify-content: flex-start;
+      grid-auto-columns: 30rem;
+      grid-auto-flow: column;
+      grid-gap: 3rem;
+      overflow: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-snap-stop: always;
+      -ms-touch-action: manipulation;
+      touch-action: manipulation;
+      -webkit-overflow-scrolling: touch;
+      scroll-padding: 2rem;
+      padding: 2rem;
+      margin-left: -2rem;
+      grid-template-columns: unset;
+    }
+    &-feature::-webkit-scrollbar {
+      display: none;
+      width: 0;
+    }
+    &-feature > * {
+      scroll-snap-align: start;
+    }
+  }
+}

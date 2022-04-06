@@ -1,0 +1,53 @@
+@import '../base/variables';
+.mission {
+  padding: 11.7rem 2rem 8.9rem;
+  background: #f4f8fd;
+  &-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-content {
+    max-width: 50rem;
+    width: 100%;
+  }
+
+  .global-heading {
+    max-width: 44rem;
+    font-size: 4rem;
+    line-height: 5rem;
+    margin-block: 2.5rem;
+  }
+  .global-text {
+    margin-bottom: 3.4rem;
+    font-size: 1.6rem;
+    max-width: 50rem;
+    line-height: 2.6rem;
+    font-weight: 500;
+    color: $text-gray;
+  }
+  .btn--primary {
+    border-radius: 4.1rem;
+    font-size: 1.4rem;
+    padding: 1.8rem 3rem;
+    text-transform: capitalize;
+  }
+  @media screen and (max-width: 1023.98px) {
+    padding: 8rem 1rem;
+    &-container {
+      flex-direction: column;
+    }
+    &-content {
+      text-align: center;
+    }
+    &-heading {
+      display: block;
+      margin: 0 auto;
+    }
+    &-image {
+      display: none;
+    }
+  }
+}

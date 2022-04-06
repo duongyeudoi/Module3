@@ -1,0 +1,17 @@
+$gray: #635f85;
+$primary: #ff7d00;
+$secondary: #5a73e5;
+$white: #ffffff;
+$background-gray: #f4f8fd;
+$gray-stroke: #e7e7e7;
+$text-dark: #051441;
+$text-gray: #5d677e;
+:root {
+  --section-spacing: 140px;
+  @media screen and (max-width: 1023.98px) {
+    --section-spacing: 70px;
+  }
+  @media screen and (max-width: 767.98px) {
+    --section-spacing: 40px;
+  }
+}

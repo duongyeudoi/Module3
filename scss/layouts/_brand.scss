@@ -1,0 +1,20 @@
+@import '../base/variables';
+.brand {
+  background-color: #f4f7fd;
+
+  padding: 8rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--section-spacing);
+  gap: 0 4rem;
+  @media screen and (max-width: 767.98px) {
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 1023.98px) {
+    gap: 0 2rem;
+    padding: 3rem;
+    justify-content: space-around;
+  }
+}

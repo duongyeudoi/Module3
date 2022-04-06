@@ -1,0 +1,103 @@
+@import '../base/variables';
+.service {
+  padding: 0 2rem;
+  max-width: 110rem;
+  margin: 0 auto;
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &-caption {
+    margin-bottom: 2.5rem;
+  }
+  &-heading {
+    max-width: 42.6rem;
+    text-align: center;
+    margin-bottom: 3.2rem;
+  }
+  &-desc {
+    margin-bottom: 7.3rem;
+  }
+  &-feature {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.3rem;
+  }
+  &-item {
+    border-radius: 1.3rem;
+    padding: 4rem 4.5rem 8.7rem;
+    border: 0.2rem solid #edeff7;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s linear;
+    &:hover {
+      box-shadow: 0px 24px 60px rgba(94, 122, 148, 0.1);
+      border-color: transparent;
+      cursor: pointer;
+    }
+    &:hover .service-image {
+      background-color: $secondary;
+      img {
+        filter: brightness(10);
+      }
+    }
+  }
+  &-image {
+    width: 6.7rem;
+    height: 6.7rem;
+    border-radius: 50%;
+    background-color: #edeff7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2.6rem;
+    transition: all 0.2s linear;
+    img {
+      transition: all 0.2s linear;
+    }
+  }
+  &-title {
+    margin-bottom: 1.9rem;
+  }
+  &-text {
+    text-align: center;
+  }
+  @media screen and (max-width: 1023.98px) {
+    padding-bottom: 5rem;
+    &-desc {
+      margin-bottom: 3.3rem;
+    }
+    &-feature {
+      display: grid;
+      justify-content: flex-start;
+      grid-auto-columns: 30rem;
+      grid-auto-flow: column;
+      grid-gap: 1.5rem;
+      overflow: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-snap-stop: always;
+      -ms-touch-action: manipulation;
+      touch-action: manipulation;
+      -webkit-overflow-scrolling: touch;
+      scroll-padding: 1rem;
+      padding: 2rem;
+      margin-left: -2rem;
+      grid-template-columns: unset;
+    }
+    &-features::-webkit-scrollbar {
+      display: none;
+      width: 0;
+    }
+    &-feature > * {
+      scroll-snap-align: start;
+      padding: 2rem 2rem 4.5rem;
+    }
+  }
+}
